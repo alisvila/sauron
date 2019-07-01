@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.nav-btn {
+  background: #ff9900;
+  padding: 5px 34px;
+  border-radius: 10px;
+}
+
+.nav-btn a {
+  color: white !important;
+}
+
+
+.btn-finno {
+  border: 1px solid #ff9900;
+  background-color: #ff9900;
+  color: white;
+}
+
+.btn-finno:hover {
+background-color: #f58220
+}
+
+.login-wrapper {
+  margin: 19% auto;
+  width: 445px;
+  padding: 40px;
+  border: 1px solid #e6e6e6;
+  background-color: #fbfbfb;
+  direction: rtl;
+
+}
+.login-wrapper input {
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 96%;
+}
+
+.checkbox {
+      text-align: center;
+  color: #505050;
+}
+.error {
+      text-align: center;
+  color: white;
+  background: #e23d39;
+  margin-top: 14px;
+  border-radius: 5px;
+  padding: 2px;
+}
+.power {
+  color: #444444;
+      text-align: center;
+  direction: ltr;
+    font-size: 22px;
+}
+.power img {
+  height: 41px;
+}
+.power .heart {
+  height: 26px;
+}
