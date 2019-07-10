@@ -55,7 +55,8 @@ background-color: #f58220
   color: #505050;
 }
 .error {
-      text-align: center;
+  display: none;
+  text-align: center;
   color: white;
   background: #e23d39;
   margin-top: 14px;
@@ -73,4 +74,20 @@ background-color: #f58220
 }
 .power .heart {
   height: 26px;
+}
+
+.banner-text-wrapper {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-text {
+  font-size: 43px;
+  color: white;
+}
+
+.sec-colom {
+  text-align: center;
 }

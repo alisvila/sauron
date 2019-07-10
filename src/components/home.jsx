@@ -6,10 +6,83 @@ export default class Home extends Component {
         return (
             <>
                 <Navbar />
-                <div>
-                    home comp
+                <div className="container">
+                    <img className="img-fluid" src="/img/main-banner.jpg" />
+                    <div className="banner-text-wrapper">
+                        <div className="row">
+                            <span className="banner-text">
+                                some text
+                            </span>
+                        </div>
+                        <div className="row">
+                            <a className="btn btn-primary">click</a>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="sec-colom">
+                            <div className="col-md-12">
+                                <img class="hero-logo" src="https://www.google.com/recaptcha/intro/images/hero-recaptcha-invisible.gif" />
+                            </div>
+                            <div className="col-md-12">
+                                <h2>Introducing naKhanaa v1</h2>
+                            </div>
+                            <div className="col-md-12">
+                                <p>
+                                We are excited to introduce reCAPTCHA v3, which helps you detect abusive traffic on your website without any user friction. It returns a score based on the interactions with your website and provides you more flexibility to take appropriate actions. See blog for more details.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="sec-colom">
+                            <div class="col-md-12">
+                                <h1 class="header-question">What is reCAPTCHA?</h1>
+                            </div>
+                            <div class="col-md-12">
+                                <p>
+                                    reCAPTCHA is a free service that protects your website from spam and abuse. reCAPTCHA uses an advanced risk analysis engine
+                                    and adaptive challenges to keep automated software from engaging in abusive activities on your site. It does this while letting
+                                    your valid users pass through with ease.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div className="row">
+                            <div class="col-md-4">
+                                <img class="icons" alt="" src="images/icon-advanced.png" />
+                                <h2>
+                                    Advanced Security
+                                </h2>
+                                <p>
+                                    State of the art spam &amp; abuse protection for your website
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="icons" alt="" src="images/icon-ease.png" />
+                                <h2>
+                                    Ease of Use
+                                </h2>
+                                <p>
+                                    Low friction, effortless interaction for your users
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="icons" alt="" src="images/icon-creation.png" />
+                                <h2>
+                                    Creation of Value
+                                </h2>
+                                <p>
+                                    Apply the human bandwidth to benefit people everywhere
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </>
         )
     }
-}
+}   

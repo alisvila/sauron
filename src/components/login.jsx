@@ -1,6 +1,27 @@
 import React, { Component } from 'react'
+import agent from '../service/api'
 
 export default class login extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            username: "",
+            password: ""
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        const target = event.target;
+        this.setState({[target.name]: target.value})
+    }
+    
+    login = () => {
+        console.log(agent.Auth.login(this.state.username, this.state.password));
+    }
+
     render() {
         return (
             <div className="container">
@@ -9,15 +30,32 @@ export default class login extends Component {
                         <form className="form-signin">
                             <img className="mb-4 logo" src="https://sabinarya.com/wp-content/uploads/2019/04/Sabin_Tejarat-Aria-Vsmall.png" alt="" />
                             <label for="inputEmail" className="sr-only">آدرس ایمیل</label>
-                            <input type="text" id="inputEmail" className="form-control" placeholder="آدرس ایمیل" required autofocus />
+                            <input type="text"
+                                name="username"
+                                id="inputEmail"
+                                className="form-control"
+                                value={this.state.username}
+                                onChange={this.handleChange}
+                                placeholder="آدرس ایمیل"
+                                required
+                                autofocus
+                            />
                             <label for="inputPassword" className="sr-only">روز عبور</label>
-                            <input type="password" id="inputPassword" className="form-control" placeholder="روز عبور" required />
+                            <input type="password"
+                                name="password"
+                                id="inputPassword"
+                                className="form-control"
+                                value={this.state.password}
+                                onChange={this.handleChange}
+                                placeholder="رمز عبور"
+                                required
+                            />
                             <div className="checkbox mb-3">
                                 <label>
-                                <input type="checkbox" value="remember-me" /> مرا به خاطر بسپار
+                                <input type="checkbox" value="remember-me" />مرا به خاطر بسپار
                                 </label>
                             </div>
-                            <a className="btn btn-lg btn-block btn-finno" onclick="login()" >ورود</a>
+                            <a className="btn btn-lg btn-block btn-finno" onClick={this.login}>ورود</a>
                             <p className="error" id="error"></p> 
                         </form>
                     </div>

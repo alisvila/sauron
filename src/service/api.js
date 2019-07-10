@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const API_ROOT = 'http://service.sirang.sabinarya.com/api';
+const API_ROOT = 'http://test-service.sirang.sabinarya.net/api';
 
 const encode = encodeURIComponent;
 const responseBody = res => res.body;
@@ -14,13 +14,13 @@ const tokenPlugin = req => {
 
 const requests = {
   del: url =>
-    Axios.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
+    Axios.del(`${API_ROOT}${url}`).then(responseBody),
   get: url =>
-    Axios.get(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
+    Axios.get(`${API_ROOT}${url}`).then(responseBody),
   put: (url, body) =>
-    Axios.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody),
+    Axios.put(`${API_ROOT}${url}`, body).then(responseBody),
   post: (url, body) =>
-    Axios.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
+    Axios.post(`${API_ROOT}${url}`, body).then(responseBody)
 };
 
 const Auth = {
