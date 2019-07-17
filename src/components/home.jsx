@@ -22,7 +22,7 @@ export default class Home extends Component {
                     <div className="row">
                         <div className="sec-colom">
                             <div className="col-md-12">
-                                <img class="hero-logo" src="https://www.google.com/recaptcha/intro/images/hero-recaptcha-invisible.gif" />
+                                <img className="hero-logo" src="https://www.google.com/recaptcha/intro/images/hero-recaptcha-invisible.gif" />
                             </div>
                             <div className="col-md-12">
                                 <h2>Introducing naKhanaa v1</h2>
@@ -35,12 +35,12 @@ export default class Home extends Component {
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="sec-colom">
-                            <div class="col-md-12">
-                                <h1 class="header-question">What is reCAPTCHA?</h1>
+                    <div className="row">
+                        <div className="sec-colom">
+                            <div className="col-md-12">
+                                <h1 className="header-question">What is reCAPTCHA?</h1>
                             </div>
-                            <div class="col-md-12">
+                            <div className="col-md-12">
                                 <p>
                                     reCAPTCHA is a free service that protects your website from spam and abuse. reCAPTCHA uses an advanced risk analysis engine
                                     and adaptive challenges to keep automated software from engaging in abusive activities on your site. It does this while letting
@@ -50,10 +50,10 @@ export default class Home extends Component {
                         </div>
                     </div>
 
-                    <div class="">
+                    <div className="">
                         <div className="row">
-                            <div class="col-md-4">
-                                <img class="icons" alt="" src="images/icon-advanced.png" />
+                            <div className="col-md-4">
+                                <img className="icons" alt="" src="images/icon-advanced.png" />
                                 <h2>
                                     Advanced Security
                                 </h2>
@@ -61,8 +61,8 @@ export default class Home extends Component {
                                     State of the art spam &amp; abuse protection for your website
                                 </p>
                             </div>
-                            <div class="col-md-4">
-                                <img class="icons" alt="" src="images/icon-ease.png" />
+                            <div className="col-md-4">
+                                <img className="icons" alt="" src="images/icon-ease.png" />
                                 <h2>
                                     Ease of Use
                                 </h2>
@@ -70,8 +70,8 @@ export default class Home extends Component {
                                     Low friction, effortless interaction for your users
                                 </p>
                             </div>
-                            <div class="col-md-4">
-                                <img class="icons" alt="" src="images/icon-creation.png" />
+                            <div className="col-md-4">
+                                <img className="icons" alt="" src="images/icon-creation.png" />
                                 <h2>
                                     Creation of Value
                                 </h2>

@@ -19,7 +19,8 @@ export default class login extends Component {
     }
     
     login = () => {
-        console.log(agent.Auth.login(this.state.username, this.state.password));
+        console.log('aa')
+        agent.Auth.login(this.state.username, this.state.password).then(res => console.log(res).catch(err => console.log(err)));
     }
 
     render() {
