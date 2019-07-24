@@ -5,7 +5,7 @@ export default function Card(props) {
             <div class="d-flex card wrapper">
                 <div class="client panel panel-default text-center approved" data="ffilan" status="approved">
                     <div class="panel-heading">
-                        <h6></h6>
+                        <h6>asd</h6>
                     </div>
                         <div class="logo approved"><img src="image" /></div>
                         <p>{props.children}</p>
@@ -17,6 +17,5 @@ export default function Card(props) {
                     </div>
                 </div>
             </div>
-
     )
 }
