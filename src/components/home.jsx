@@ -50,6 +50,57 @@ export default class Home extends Component {
                         </div>
                     </div>
 
+                    <div className="row banner-extension">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <h2>تبلیغ‌دهنده </h2>
+                                    <p>
+                                    تبلیغات موبایلی از طریق امکانات هدفمندی، بیش از هر روش تبلیغاتی دیگر، قادر است شما را به مشتریان بالقوه نزدیک کند. همچنین با ارائه آمار و ارقام دقیق شما را در تجزیه و تحلیل مسیر بازاریابی کمک خواهد کرد.
+                                    </p>
+                                    <a href="/advertisers/intro/" className="more-btn hover-pulse-animate"><i className="fa fa-chevron-circle-right" aria-hidden="true"></i>بیشتر بدانید</a>
+                                </div>
+                                <div className="col-lg-6">
+                                    <h2>نمایش‌دهنده </h2>
+                                    <p>
+                                    عدد نماینده رسمی تبلیغات در اپلیکیشن‌های منتشر شده در کافه بازار می باشد. برای عدد حفظ رضایت کاربر از اپلیکیشن شما یک اولویت است. شما می‌توانید به راحتی با پیاده سازی کلاینت عدد و نمایش تبلیغات در اپلیکیشن خود، به ازای کلیک کاربران، درآمد کسب کنید.
+                                    </p>
+                                    <a href="/publishers/intro/" className="more-btn hover-pulse-animate"><i className="fa fa-chevron-circle-right" aria-hidden="true"></i>بیشتر بدانید</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="features row justify-content-center">
+                        <div className="col-md-3 services-wrap fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <a href="http://card.sabinarya.com/">
+                                <div className="feature-wrap">
+                                    <div className="center-text">
+                                        <p>filan</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-md-3" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <a href="https://finnoboom.com/">
+                                <div className="feature-wrap">
+                                    <div className="center-text">
+                                        <p>filan</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-md-3" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <a href="http://aryapay24.com/">
+                                <div className="feature-wrap">
+                                    <div className="center-text">
+                                        <p>filan</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                     <div className="">
                         <div className="row">
                             <div className="col-md-4">

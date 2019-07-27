@@ -92,7 +92,9 @@ background-color: #f58220
   text-align: center;
 }
 
-
+.center-text {
+  text-align: center;
+}
 
 .card {
   border: none;
