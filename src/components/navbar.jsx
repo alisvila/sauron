@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
+import logo from './logo.jpeg';
 
 const LoggedInView = props => {
   if(!props.currentUser) {
     return(
+      <div class="container">
       <ul className="navbar-nav">
-        <li className="nav-item nav-btn">
-          <a className="nav-link" href="/login">Login</a>
+        <li className="nav-item">
+          <a className="btn-finno more-btn" href="/login">Login</a>
         </li>
       </ul>
+      </div>
     )
   }
   return null
@@ -52,7 +55,7 @@ class NavBar extends Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="#">
-              <img src="https://sabinarya.com/wp-content/uploads/2019/04/Sabin_Tejarat-Aria-Vsmall.png" />
+              <img src={logo} />
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
