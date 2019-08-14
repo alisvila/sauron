@@ -14,8 +14,20 @@ export default class PannelHome extends Component {
                 <div className="body-wrapper">
                         <div className="pannel-body">
                             <div className="flex-row">
-                                <Card>filan bisar asda asd asd </Card>
-                                <Card>filan bisar asda asd asd </Card>
+                                <Card>
+                                    <p>
+                                        filan bisar asda asd asd 
+                                    </p>
+                                    <a href="/pannel/new" v-if="isNew" class="btn btn-finno btn-small confirm hidden">افزودن</a>
+                                    <a click="deleteService" v-else class="btn btn-finno btn-small confirm hidden" >حذف شود؟</a>
+                                </Card>
+                                <Card>
+                                    <p>
+                                        filan bisar asda asd asd
+                                    </p>
+                                    <a href="/pannel/new" v-if="isNew" class="btn btn-finno btn-small confirm hidden">افزودن</a>
+                                    <a click="deleteService" v-else class="btn btn-finno btn-small confirm hidden" >حذف شود؟</a>
+                                </Card>
                             </div>
                         </div>
                         <div className="pannel-menu">

@@ -19,15 +19,17 @@ const requests = {
     Axios.get(`${API_ROOT}${url}`).then(responseBody),
   put: (url, body) =>
     Axios.put(`${API_ROOT}${url}`, body).then(responseBody),
-  post: (url, body) =>
-    Axios.post(`${API_ROOT}${url}`, body).then(responseBody)
+  post: (url, body, callback) =>
+    Axios.post(`${API_ROOT}${url}`, body).then(callback).catch(function(e){
+      console.log(e)
+      })
 };
 
 const Auth = {
     current: () => 
         requests.get('/account/login'),
-    login: (email, password) =>
-        requests.post('/account/login', `grant_type=password&username=${email}&password=${password}&client_id=ngAuthApp`)
+    login: (email, password, callback) =>
+        requests.post('/account/login', `grant_type=password&username=${email}&password=${password}&client_id=ngAuthApp`, callback)
 }
 
 export default {

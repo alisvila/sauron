@@ -119,9 +119,19 @@ export default class Home extends Component {
                     <footer className="row">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-3 footer-pillar">
-                                <img class="logo-image" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/26/2019/03/finances-logo.png" alt="finances-logo" />
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله</p>
+                            <div className="col-md-3 footer-pillar">
+                                <h4>filan</h4>
+                                <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Streed address 15, City</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">+321 97654387</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">emailaddress@company.com</a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div className="col-md-3 footer-pillar">
                                     <h4>filan</h4>
@@ -151,19 +161,10 @@ export default class Home extends Component {
                                         </li>
                                     </ul>
                                 </div>
+
                                 <div className="col-md-3 footer-pillar">
-                                <h4>filan</h4>
-                                <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Streed address 15, City</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">+321 97654387</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">emailaddress@company.com</a>
-                                        </li>
-                                    </ul>
+                                <img class="logo-image" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/26/2019/03/finances-logo.png" alt="finances-logo" />
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله</p>
                                 </div>
                             </div>
                         </div>

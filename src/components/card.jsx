@@ -7,13 +7,11 @@ export default function Card(props) {
                     <div class="panel-heading">
                         <h6>asd</h6>
                     </div>
-                        <div class="logo approved"><img src="image" /></div>
-                        <p>{props.children}</p>
+                        <div class="logo approved"></div>
+                        <div className="card-body">{props.children}</div>
                         <div class="approved-icone">
                         <i class="fa fa-trash-o"></i>
-    
-                        <a href="/pannel/new" v-if="isNew" class="btn btn-finno btn-small confirm hidden">افزودن</a>
-                        <a click="deleteService" v-else class="btn btn-finno btn-small confirm hidden" >حذف شود؟</a>
+
                     </div>
                 </div>
             </div>

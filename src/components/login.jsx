@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import agent from '../service/api'
+import { Redirect } from 'react-router-dom'
 
 export default class login extends Component {
 
@@ -9,7 +10,7 @@ export default class login extends Component {
             username: "",
             password: ""
         }
-
+        
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -18,9 +19,13 @@ export default class login extends Component {
         this.setState({[target.name]: target.value})
     }
     
+    loginSuccess = () => {
+        this.props.history.push('/pannel')
+    }
+
     login = () => {
         console.log('aa')
-        agent.Auth.login(this.state.username, this.state.password).then(res => console.log(res).catch(err => console.log(err)));
+        agent.Auth.login(this.state.username, this.state.password, this.loginSuccess);
     }
 
     render() {
