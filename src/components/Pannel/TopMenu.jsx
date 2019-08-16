@@ -11,7 +11,7 @@ export default function TopMenu() {
                 <ul className="nav pull-right messages">
 
                 </ul>
-                <ul className="nav mr-auto">
+                <ul className="nav top-nav">
                     <ul className="nav navbar-nav pull-right signout">
                         <a href="/" className="top-link" click="logout">خــروج</a>
                     </ul>

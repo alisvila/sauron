@@ -16,14 +16,14 @@ export default function SideMenu() {
                     </a>
                     <p></p>
                     <li className="active">
-                        <a className="nav-link">
-                            <i class="fa fa-dashboard"></i><Link to="/pannel/">pannel</Link>
-                        </a>
+                    <Link to="/pannel/" className="nav-link">
+                            <i class="fa fa-dashboard"></i>Pannel
+                    </Link>
                     </li>
                     <li className="">
-                    <a className="nav-link">
-                            <i class="fa fa-dashboard"></i><Link to="/pannel/upload">upload</Link>
-                        </a>
+                    <Link to="/pannel/upload" className="nav-link">
+                            <i class="fa fa-dashboard"></i>upload
+                    </Link>
                         <ul>
                             <li>
                             </li><li>
@@ -32,9 +32,14 @@ export default function SideMenu() {
                         </ul>
                     </li>
                     <li className="">
-                    <a className="nav-link">
-                            <i class="fa fa-dashboard"></i><Link to="/users/">Users</Link>
-                        </a>
+                    <Link to="/user/" className="nav-link">
+                            <i class="fa fa-dashboard"></i>Users
+                    </Link>
+                    </li>
+                    <li className="">
+                    <Link to="/pannel/demo" className="nav-link">
+                            <i class="fa fa-dashboard"></i>Demo
+                        </Link>
                     </li>
                 </ul>
 

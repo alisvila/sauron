@@ -16,7 +16,7 @@
 
 .top-link {
     padding: 15px;
-    color: #3f6c71;
+    color: #f1f1f1;
     text-decoration: none;
 }
 
@@ -34,6 +34,11 @@
     font-size: 14px;
     direction: rtl;
 }
+
+.top-nav {
+    margin-right: auto;
+}
+
 .navbar-brand {
     margin: 0 auto;
 }
@@ -85,6 +90,7 @@
 
 .side-navbar {
     padding-top: 11px;
+    padding-right: 0;
     width: 100%;
 }
 
@@ -126,4 +132,20 @@
     margin: 19px 0;
     border-top: 1px solid #b5cfd8;
     padding: 26px;
+}
+
+.nothing {
+    background-color: #74d3f9;
+}
+
+.nothing img {
+    display: block;
+    margin: 0 auto;
+}
+
+.nothing-header {
+    text-align: center;
+    padding: 40px 0 14px;
+    background-color: #74d3f9;
+    color: #3b626f;
 }
