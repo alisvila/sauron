@@ -17,12 +17,12 @@ export default function SideMenu() {
                     <p></p>
                     <li className="active">
                         <a className="nav-link">
-                            <i class="fa fa-dashboard"></i><Link to="/users/">Users</Link>
+                            <i class="fa fa-dashboard"></i><Link to="/pannel/">pannel</Link>
                         </a>
                     </li>
                     <li className="">
                     <a className="nav-link">
-                            <i class="fa fa-dashboard"></i><Link to="/users/">Users</Link>
+                            <i class="fa fa-dashboard"></i><Link to="/pannel/upload">upload</Link>
                         </a>
                         <ul>
                             <li>
@@ -62,7 +62,7 @@ export default function SideMenu() {
                 </ul>
 
 
-                <p className="copyright">تمام حقوق این سایت برای شرکت سابین تجارت آریا محفوظ می‌باشد.{year()}</p>
+                <p className="copyright">copyright {year()}</p>
             </nav>
         </div>
     )

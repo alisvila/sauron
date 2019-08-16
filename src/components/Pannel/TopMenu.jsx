@@ -6,7 +6,7 @@ export default function TopMenu() {
         <div>
             <nav className="navbar navbar-default fixed-top rtl">
                 <div className="navbar-header col-xs-5">
-                    <span className="navbar-brand">s</span>
+                    <span className="navbar-brand">KHARESH</span>
                 </div>
                 <ul className="nav pull-right messages">
 

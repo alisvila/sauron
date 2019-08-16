@@ -22,7 +22,26 @@ const requests = {
   post: (url, body, callback) =>
     Axios.post(`${API_ROOT}${url}`, body).then(callback).catch(function(e){
       console.log(e)
-      })
+      }),
+  formData: (URL, blob) => {
+    let data = new FormData()
+  
+    data.append('name', 'image')
+    data.append('file', blob)
+    console.log(data)
+  
+    let config = {
+      header : {
+        'Content-Type' : 'multipart/form-data'
+      }
+    }
+
+    Axios.post(URL, data, config).then(response => {
+      console.log('response', response)
+    }).catch(error => {
+      console.log('error', error)
+    })
+  }
 };
 
 const Auth = {
@@ -32,6 +51,13 @@ const Auth = {
         requests.post('/account/login', `grant_type=password&username=${email}&password=${password}&client_id=ngAuthApp`, callback)
 }
 
+const ImageService = {
+  send: (URL, blob) => {
+    requests.formData(URL, blob)
+  }
+}
+
 export default {
-    Auth
+    Auth,
+    ImageService
 };
