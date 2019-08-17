@@ -15,12 +15,22 @@ const tokenPlugin = req => {
 const requests = {
   del: url =>
     Axios.del(`${API_ROOT}${url}`).then(responseBody),
-  get: url =>
-    Axios.get(`${API_ROOT}${url}`).then(responseBody),
+  get: (url, callback) => {
+    let headers = {
+      headers : {
+        'Access-Control-Allow-Origin': '*',
+        'Accept': "*/*",
+        'Authorization': 'Basic ' + btoa("musketeer" + ':' + "123456")
+      }
+    }
+    Axios.get(`${url}`, headers).then(responseBody).then((res) => callback(res)).catch(function(e){
+      console.log(e)
+  })
+  },
   put: (url, body) =>
     Axios.put(`${API_ROOT}${url}`, body).then(responseBody),
-  post: (url, body, callback) =>
-    Axios.post(`${API_ROOT}${url}`, body).then(callback).catch(function(e){
+  post: (url, body, headers, callback) =>
+    Axios.post(`${API_ROOT}${url}`, body, {headers: headers}).then(callback).catch(function(e){
       console.log(e)
       }),
   formData: (URL, blob) => {
@@ -46,10 +56,13 @@ const requests = {
 
 const Auth = {
     current: () => 
-        requests.get('/account/login'),
-    login: (email, password, callback) =>
-        requests.post('/account/login', `grant_type=password&username=${email}&password=${password}&client_id=ngAuthApp`, callback)
-}
+      requests.get('/account/login'),
+    login: (username, password, callback) => {
+      console.log(btoa(username + ':' + password))
+      // requests.post('/account/login', `grant_type=password&username=${email}&password=${password}&client_id=ngAuthApp`, callback)
+      requests.post('/account/login', {}, {'Authorization': 'Basic ' + btoa(username + ':' + password) }, callback)
+    }
+  }
 
 const ImageService = {
   send: (URL, blob) => {
@@ -57,7 +70,17 @@ const ImageService = {
   }
 }
 
+const Kharesh = {
+  check: (string) => {
+    requests.post(URL, string)
+  },
+  get: (url, callback) => {
+    requests.get(url, callback)
+  }
+}
+
 export default {
     Auth,
-    ImageService
+    ImageService,
+    Kharesh
 };
