@@ -26,6 +26,8 @@ export default class uploadPage extends Component {
     
 
     _handleChange(e) {
+        let image = e.value
+        console.log(image, "this is image btw")
         console.log(e)
         e.preventDefault()
         let reader = new FileReader();
@@ -39,6 +41,7 @@ export default class uploadPage extends Component {
             });
         }
         // base64
+        // console.log(file, "base64?")
         reader.readAsDataURL(file)
         // var blob2 = file2 => new Promise((resolve, reject) => {
         var blob2 = (e) => {
@@ -46,7 +49,8 @@ export default class uploadPage extends Component {
             let file = e.target.files[0];
     
             blobReader.onloadend = () => {
-                Agent.ImageService.send("//divar", blobReader.result)
+                Agent.ImageService.send("http://192.168.200.96:8000/upload/", blobReader.result)
+                // console.log(blobReader.result)
                 return blobReader.result
             }
             // blob
@@ -77,7 +81,7 @@ export default class uploadPage extends Component {
                                     <form className="">
                                         <div className="form-group">
                                             <label for="exampleFormControlFile1">Example image input</label>
-                                            <input type="file" onChange={(e) => this._handleChange(e)} className="form-control-file" id="exampleFormControlFile1" />
+                                            <input type="file" onChange={(e) => this._handleChange(e)} className="form-control-file" id="exampleFormControlFile1" accept=".png, .jpeg, .jpg, .TIF, .gif"/>
                                         </div>
                                     </form>
                                     <div className="image-preview-wrapper">

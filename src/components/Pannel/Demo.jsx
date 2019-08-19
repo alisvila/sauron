@@ -25,13 +25,32 @@ export default class Demo extends Component {
     }
 
     beKharesh = (src) => {
+        console.log(src.results.length, "src")
         return(<img src={src}></img>)
     }
 
     refresh = () => {
         console.log(this.beKharesh)
-        let url="//192.168.200.98:8000/known/"
+        let url="http://192.168.200.96:8000/known/"
         Agent.Kharesh.get(url, this.beKharesh);
+        // let headers = {
+        //     headers : {
+        //       'Access-Control-Allow-Origin': '*',
+        //       'Content-Type': 'application/json',
+        //       'Accept': "*/*",
+        //       'Authorization': "Basic " + btoa("musketeer" + ':' + "123456")
+        //     }
+        //   }
+
+        // axios({
+        //     method: 'GET',
+        //     url: '//192.168.200.96:8000/known/',
+        //     responseType: 'stream',
+        //     headers: {'Access-Control-Allow-Origin': '*'}
+        //   })
+        //     .then(function (response) {
+        // });
+
     }
     render() {
         return (

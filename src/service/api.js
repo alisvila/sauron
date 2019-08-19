@@ -17,13 +17,15 @@ const requests = {
     Axios.del(`${API_ROOT}${url}`).then(responseBody),
   get: (url, callback) => {
     let headers = {
+      baseURL: "http://192.168.200.96:8000",
+      url: '/known/',
       headers : {
-        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
         'Accept': "*/*",
-        'Authorization': 'Basic ' + btoa("musketeer" + ':' + "123456")
+        'Authorization': "Basic " + btoa("musketeer" + ':' + "123456")
       }
     }
-    Axios.get(`${url}`, headers).then(responseBody).then((res) => callback(res)).catch(function(e){
+    Axios.get(`${url}` ,headers).then(src => callback(src)).catch(function(e){
       console.log(e)
   })
   },
@@ -35,14 +37,14 @@ const requests = {
       }),
   formData: (URL, blob) => {
     let data = new FormData()
-  
-    data.append('name', 'image')
+    // data.append('name', 'image')
     data.append('file', blob)
     console.log(data)
   
     let config = {
-      header : {
-        'Content-Type' : 'multipart/form-data'
+      headers : {
+        'Content-Type' : 'multipart/form-data',
+        'Authorization': 'Basic ' + btoa("musketeer" + ':' + "123456")
       }
     }
 
